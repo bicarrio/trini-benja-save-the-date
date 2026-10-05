@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trini y Benja | Save the date</title>
+  <style>
+    :root {
+      --bg: #e7f4ff;
+      --panel: #ffffff;
+      --ink: #243551;
+      --muted: #5a6f90;
+      --accent: #357287;
+      --line: #d0e2f3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 12% 16%, #d5f1ff 0%, transparent 45%),
+        radial-gradient(circle at 88% 28%, #d7f6e7 0%, transparent 40%),
+        radial-gradient(circle at 40% 82%, #efe3ff 0%, transparent 38%),
+        linear-gradient(180deg, #d9ecff 0%, #e9f7ef 45%, var(--bg) 100%);
+      color: var(--ink);
+    }
+
+    .wrap {
+      width: min(1050px, 92vw);
+      margin: 0 auto;
+      padding: 20px 0 36px;
+    }
+
+    .hero {
+      border-radius: 22px;
+      overflow: hidden;
+      position: relative;
+      min-height: 46vh;
+      display: grid;
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.58);
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      padding: clamp(18px, 3.8vw, 34px);
+      width: 100%;
+      min-height: 46vh;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 10px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      line-height: 1.15;
+      font-weight: 800;
+      font-size: clamp(2rem, 4.6vw, 3.3rem);
+      max-width: min(560px, 72%);
+      justify-self: end;
+      align-self: start;
+      text-align: right;
+      -webkit-text-stroke: 1px #000;
+      text-shadow: 0 6px 22px rgba(0, 0, 0, 0.36);
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: clamp(0.98rem, 1.9vw, 1.15rem);
+      opacity: 0.95;
+      max-width: 540px;
+      align-self: end;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .grid {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      padding: clamp(16px, 3vw, 26px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 1.3rem;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px dashed #d8e5f3;
+      flex-wrap: wrap;
+    }
+
+    .row:last-child {
+      border-bottom: 0;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .cta {
+      margin-top: 16px;
+      display: inline-block;
+      text-decoration: none;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 600;
+    }
+
+    .map-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .goodbye {
+      margin-top: 18px;
+      border-radius: 22px;
+      overflow: hidden;
+      position: relative;
+      min-height: 260px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+      background: #eef4fa;
+    }
+
+    .goodbye img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(0.78);
+    }
+
+    .goodbye h3 {
+      position: absolute;
+      top: 75%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 1;
+      margin: 0;
+      text-align: center;
+      color: #fff;
+      font-size: clamp(1.4rem, 3.5vw, 2.1rem);
+      letter-spacing: 0.4px;
+      -webkit-text-stroke: 1px #000;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 20px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 780px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        max-width: 100%;
+        text-align: center;
+        justify-self: center;
+      }
+
+      .hero p {
+        text-align: center;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <img src="header.jpg" alt="Portada matrimonio">
+      <div class="hero-text">
+        <h1>Nos vamos a casar, y queremos que nos acompañes!</h1>
+        <p>Estamos preparando este día con mucho cariño. Por ahora, queremos que guardes la fecha.</p>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Detalles principales</h2>
+        <p><strong>Fecha:</strong> 20 de marzo de 2027</p>
+        <p><strong>Lugar:</strong> Casa Vidal Del Valle, Santo Domingo</p>
+        <a class="map-link" href="https://maps.app.goo.gl/mGKnovbZrF9aZGWv8" target="_blank" rel="noopener noreferrer">Abrir ubicación en Google Maps</a>
+      </section>
+
+      <section class="card">
+        <h2>Programa tentativo</h2>
+        <div class="row"><span>Ceremonia</span><strong>13:00 <span class="muted">(por confirmar)</span></strong></div>
+        <div class="row"><span>Almuerzo</span><strong>14:30 <span class="muted">(por confirmar)</span></strong></div>
+        <div class="row"><span>Fiesta</span><strong>18:00 <span class="muted">(por confirmar)</span></strong></div>
+        <div class="row"><span>Término</span><strong>23:00 <span class="muted">(por confirmar)</span></strong></div>
+      </section>
+    </main>
+
+    <section class="card" style="margin-top: 18px;">
+      <h2>RSVP</h2>
+      <p class="muted">Nos ayudaría mucho que confirmes tu asistencia cuando habilitemos el formulario.</p>
+      <!-- REEMPLAZAR ESTE LINK CON TU GOOGLE FORM RSVP -->
+      <a class="cta" href="https://AQUI-VA-TU-LINK-DE-GOOGLE-FORM" target="_blank" rel="noopener noreferrer">Confirmar asistencia</a>
+    </section>
+
+    <section class="goodbye">
+      <img src="footer.jpg" alt="Imagen de cierre">
+      <h3>Nos vemos! 🍸</h3>
+    </section>
+
+    <footer>Hecho con 🌊 swell</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save the date 2027</title>
+  <style>
+    :root {
+      --bg: #f3f9ff;
+      --surface: #ffffff;
+      --text: #223552;
+      --muted: #5f7290;
+      --accent: #2f7388;
+      --chip: #e1f2f7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    .layout {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 52vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      max-width: 760px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4.3vw, 3rem);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      margin: 12px 0 0;
+      font-size: clamp(1rem, 2.1vw, 1.2rem);
+      opacity: 0.95;
+    }
+
+    .content {
+      width: min(860px, 92vw);
+      margin: -34px auto 22px;
+      background: var(--surface);
+      border-radius: 20px;
+      box-shadow: 0 14px 26px rgba(0, 0, 0, 0.08);
+      padding: clamp(20px, 4vw, 32px);
+      position: relative;
+      z-index: 2;
+    }
+
+    .title {
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+
+    .p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 12px 0 18px;
+    }
+
+    .chip {
+      background: var(--chip);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .time-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .time-card {
+      border: 1px solid #dbe7f5;
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: #fcfcfc;
+    }
+
+    .time-card strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 11px 16px;
+      font-weight: 600;
+      transition: opacity 0.15s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-ghost {
+      border: 1px solid #cfdff2;
+      color: #264f76;
+      background: #eef6ff;
+    }
+
+    .farewell {
+      width: min(860px, 92vw);
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .farewell img {
+      width: 100%;
+      min-height: 220px;
+      max-height: 340px;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.67);
+    }
+
+    .farewell span {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: clamp(1.5rem, 3.8vw, 2.25rem);
+      font-weight: 600;
+    }
+
+    footer {
+      margin: 22px 0 30px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <header class="hero">
+      <img src="header.jpg" alt="Foto principal">
+      <div class="hero-inner">
+        <h1>Nos vamos a casar, y queremos que nos acompañes!</h1>
+        <p>Guarda la fecha. Pronto compartiremos todos los detalles finales.</p>
+      </div>
+    </header>
+
+    <main class="content">
+      <h2 class="title">20 de marzo de 2027</h2>
+      <p class="p">Lugar: <strong>Casa Vidal Del Valle, Santo Domingo</strong></p>
+      <div class="chips">
+        <span class="chip">Save the date</span>
+        <span class="chip">Matrimonio de día</span>
+      </div>
+
+      <a class="btn btn-ghost" href="https://maps.app.goo.gl/mGKnovbZrF9aZGWv8" target="_blank" rel="noopener noreferrer">Ver mapa del lugar</a>
+
+      <div class="time-grid">
+        <article class="time-card">
+          <strong>Ceremonia</strong>
+          13:00 (por confirmar)
+        </article>
+        <article class="time-card">
+          <strong>Almuerzo</strong>
+          14:30 (por confirmar)
+        </article>
+        <article class="time-card">
+          <strong>Fiesta</strong>
+          18:00 (por confirmar)
+        </article>
+        <article class="time-card">
+          <strong>Cierre</strong>
+          23:00 (por confirmar)
+        </article>
+      </div>
+
+      <div class="actions">
+        <!-- REEMPLAZAR ESTE LINK CON TU GOOGLE FORM RSVP -->
+        <a class="btn btn-primary" href="https://AQUI-VA-TU-LINK-DE-GOOGLE-FORM" target="_blank" rel="noopener noreferrer">Confirmar asistencia (RSVP)</a>
+      </div>
+    </main>
+
+    <section class="farewell">
+      <img src="footer.jpg" alt="Imagen final">
+      <span>Nos vemos!</span>
+    </section>
+
+    <footer>Hecho con 🌊 swell</footer>
+  </div>
+</body>
+</html>
